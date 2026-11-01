@@ -1,0 +1,36 @@
+class Nodd < Formula
+  desc "Send notifications to your iPhone and wait for a human response"
+  homepage "https://www.blipdrop.net/nodd/en/"
+  version "@VERSION@"
+  license "Apache-2.0"
+
+  on_macos do
+    on_arm do
+      url "https://github.com/blipdrop/nodd/releases/download/v#{version}/nodd-aarch64-apple-darwin.tar.gz"
+      sha256 "@aarch64-apple-darwin@"
+    end
+    on_intel do
+      url "https://github.com/blipdrop/nodd/releases/download/v#{version}/nodd-x86_64-apple-darwin.tar.gz"
+      sha256 "@x86_64-apple-darwin@"
+    end
+  end
+
+  on_linux do
+    on_arm do
+      url "https://github.com/blipdrop/nodd/releases/download/v#{version}/nodd-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "@aarch64-unknown-linux-musl@"
+    end
+    on_intel do
+      url "https://github.com/blipdrop/nodd/releases/download/v#{version}/nodd-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "@x86_64-unknown-linux-musl@"
+    end
+  end
+
+  def install
+    bin.install "nodd"
+  end
+
+  test do
+    assert_match version.to_s, shell_output("#{bin}/nodd --version")
+  end
+end
