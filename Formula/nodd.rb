@@ -1,28 +1,28 @@
 class Nodd < Formula
   desc "Send notifications to your iPhone and wait for a human response"
   homepage "https://www.blipdrop.net/nodd/en/"
-  version "0.1.0"
+  version "0.2.0"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
       url "https://github.com/blipdrop/nodd/releases/download/v#{version}/nodd-aarch64-apple-darwin.tar.gz"
-      sha256 "bc3b42ce4ec12749f4a80f01ebd663edebe6b37d182cda91a895f476c05ed393"
+      sha256 "df1cd89ec2a7354833f781b3d0ab618d8b3e057f8880889ece9169c356a44777"
     end
     on_intel do
       url "https://github.com/blipdrop/nodd/releases/download/v#{version}/nodd-x86_64-apple-darwin.tar.gz"
-      sha256 "0d65c73fb6812a616c6985da6c97002f1c10b66fc25adde8289617bbc1b0902f"
+      sha256 "f10f0d4dc378943ec586fc04f41e394bc9f676c357ecfb95716e3af9277827d1"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/blipdrop/nodd/releases/download/v#{version}/nodd-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "57706b8613e1badd962b8d042e8bcacb96a0f1cf1b95ffb3b32e8364e3372d13"
+      sha256 "567c783db01751d428862f663a8cd15ba919e66cbccb33da179696ceb8e94aaf"
     end
     on_intel do
       url "https://github.com/blipdrop/nodd/releases/download/v#{version}/nodd-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "e2114d5d1f8b1fffbb7e38b96e0ea29d2fe0ac08cf48a9fb485ad18d3f842326"
+      sha256 "3ad698277b9de5487a511bbbc378d328c6ba4c64205606be94d81c3b4bf4a1c6"
     end
   end
 
